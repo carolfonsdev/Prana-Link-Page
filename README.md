@@ -93,4 +93,7 @@ prana-link-page/
 
 ---
 
+## Deploy
+[Studios Prana LinkPage](https://vercel.com/carolfonsdevs-projects/prana-link-page/9Wqkoj1gtNwHWHjitF4uP93Gp8qh)
+
 <p align="center">Made with ♡ for Prana Studios</p>
