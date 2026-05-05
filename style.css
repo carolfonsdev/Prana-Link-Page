@@ -1,0 +1,247 @@
+/* ============================================================
+   PRANA STUDIOS — Stylesheet
+   Organização: Reset → Base → Layout → Componentes → Footer
+   ============================================================ */
+
+
+/* ── RESET ─────────────────────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ── BASE ───────────────────────────────────────────────────── */
+body {
+  font-family: -apple-system, sans-serif;
+  background: #F4E8E0;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* ── LAYOUT PRINCIPAL ───────────────────────────────────────── */
+.page {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero: imagem ocupa largura total, altura proporcional */
+#hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Cards sobem para dentro da área em branco do hero (margin-top via JS) */
+#cards-area {
+  width: 100%;
+  background: transparent;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+/* ── CARDS ──────────────────────────────────────────────────── */
+.link-card {
+  background: #ffffff67;
+  border: 1px solid rgba(180, 150, 130, 0.22);
+  border-radius: 16px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(100, 70, 50, 0.09);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(100, 70, 50, 0.15);
+}
+
+.link-card:active {
+  transform: scale(0.98);
+}
+
+
+/* ── ÍCONE CIRCULAR ─────────────────────────────────────────── */
+.ic {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ic svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Fundos dos ícones */
+.ic-bg-green  { background: #4A7A5A; }
+.ic-bg-purple { background: #5B4F9A; }
+.ic-bg-mauve  { background: #9A7AAA; }
+.ic-bg-gold   { background: #C4A882; }
+.ic-bg-wa     { background: #25D366; }
+
+
+/* ── TEXTO DO CARD ──────────────────────────────────────────── */
+.lt { flex: 1; }
+
+.lt-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  /* cor herdada da classe de cor do .link-card pai */
+  color: inherit;
+}
+
+.lt-desc {
+  font-size: 12px;
+  font-weight: 300;
+  color: #aaa;
+}
+
+/* Cores do título por variante de card */
+.link-card.ic-green  { color: #4A7A5A; }
+.link-card.ic-purple { color: #5B4F9A; }
+.link-card.ic-mauve  { color: #9A7AAA; }
+.link-card.ic-gold   { color: #B8935A; }
+.link-card.ic-wa     { color: #1a9a40; }
+
+.chevron {
+  color: #C0B0A0;
+  font-size: 22px;
+  font-weight: 200;
+}
+
+
+/* ── SEÇÃO ABAIXO DOS CARDS ─────────────────────────────────── */
+.below-cards {
+  width: 100%;
+  background: #F4E8E0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12px;
+}
+
+
+/* ── QUOTE ──────────────────────────────────────────────────── */
+.quote-wrap {
+  width: 100%;
+  padding: 0 16px;
+}
+
+.quote {
+  background: #FDF8F3;
+  border: 1px solid rgba(180, 150, 130, 0.2);
+  border-radius: 16px;
+  padding: 22px 22px 18px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(100, 70, 50, 0.05);
+}
+
+.qmark {
+  font-size: 32px;
+  color: #2C2060;
+  font-family: Georgia, serif;
+  display: block;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.qtext {
+  font-family: 'Playfair Display', serif;
+  font-size: 13.5px;
+  font-style: italic;
+  color: #666;
+  line-height: 1.9;
+}
+
+.quote-heart {
+  text-align: center;
+  padding: 12px 0 4px;
+  color: #2C2060;
+  font-size: 14px;
+}
+
+
+/* ── FOOTER ─────────────────────────────────────────────────── */
+.footer {
+  width: 100%;
+  background: #F4E8E0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 0.5px solid rgba(180, 150, 130, 0.3);
+  margin-top: 8px;
+}
+
+.fi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 8px;
+  text-align: center;
+}
+
+.fi + .fi {
+  border-left: 0.5px solid rgba(180, 150, 130, 0.3);
+}
+
+.fi svg {
+  width: 20px;
+  height: 20px;
+  color: #C4A882;
+}
+
+.fi-title {
+  font-size: 11px;
+  font-weight: 500;
+  color: #3a3a3a;
+  line-height: 1.4;
+}
+
+.fi-desc {
+  font-size: 10px;
+  font-weight: 300;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+
+/* ── BOTTOM BAR ─────────────────────────────────────────────── */
+.bottom {
+  width: 100%;
+  background: #ECD9CE;
+  border-top: 0.5px solid rgba(180, 150, 130, 0.3);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.bottom span {
+  color: #C4A882;
+}
